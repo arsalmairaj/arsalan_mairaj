@@ -1,0 +1,45 @@
+/* <!-- loader section start --> */
+.preloader-logo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* background: linear-gradient(to right, #2c5364, #203a43, #0f2027); */
+  background: var(--secondary-color);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #191654;
+  z-index: 999999;
+}
+
+.first {
+  stroke: white;
+  fill-opacity: 0;
+  stroke-width: 20px;
+  stroke-dasharray: 4500;
+  animation: draw 8s ease;
+}
+@keyframes draw {
+  0% {
+    stroke-dashoffset: 4500;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+.b-name {
+  height: 30px;
+  overflow: hidden;
+}
+.l-name {
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: 12px;
+  text-transform: uppercase;
+  margin-left: 10px;
+  font-weight: bolder;
+}
+/* <!-- loader section end --> */
