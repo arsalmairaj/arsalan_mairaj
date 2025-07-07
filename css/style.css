@@ -1,45 +1,156 @@
-/* <!-- loader section start --> */
-.preloader-logo {
-  position: fixed;
-  top: 0;
-  left: 0;
-  /* background: linear-gradient(to right, #2c5364, #203a43, #0f2027); */
-  background: var(--secondary-color);
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #191654;
-  z-index: 999999;
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root{
+  --bg-color: #000000;
+  --text-color: #FFFFFF;
+  --h-color: #0065F8;
+  --btn-color: #0065F8;
+}
+*{
+   font-family: "Roboto", sans-serif;
+   box-sizing: border-box;
+}
+body{
+    background-color: var(--bg-color);
+   color: var(--text-color);
+}
+.bg-color{
+  background: var(--bg-color);
+}
+.text-color{
+   color: var(--text-color);
+}
+.text-color a{
+  color: var(--text-color);
+}
+.text-color a:hover{
+  color: var(--h-color);
+}
+.img-responsive{
+  width: 100px;
 }
 
-.first {
-  stroke: white;
-  fill-opacity: 0;
-  stroke-width: 20px;
-  stroke-dasharray: 4500;
-  animation: draw 8s ease;
+#home,#about_me,#skil{  
+  min-height: 100vh;
 }
-@keyframes draw {
-  0% {
-    stroke-dashoffset: 4500;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
+/*  */
+.bg-img{
+  background:linear-gradient(var(--bg-color) , rgb(34, 34, 36)),url(../img/main.png) no-repeat center center;
+  background-attachment: fixed;
+  background-size: contain;
+  background-blend-mode: difference;
+  filter: brightness(120%) contrast(90%) hue-rotate(360deg) saturate(2);
+  /* height: 100vh; */
 }
-.b-name {
-  height: 30px;
-  overflow: hidden;
+/*  */
+.sub-img{
+  width: 70%;
+  filter: brightness(120%) contrast(90%) hue-rotate(360deg) saturate(1.5);
+  clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
 }
-.l-name {
+.btn-cv{
+  background-color: var(--btn-color);
+  color: var(--text-color);
+}
+/*  */
+/* <!-- Skills section start --> */
+.skil-sec {
+  display: flex;
+  gap: 2%;
+  margin-top: 20px;
+}
+.container .circle {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+}
+.container .circle::before {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  border-radius: 50%;
+  background: #222;
+  opacity: 0.8;
+}
+.container .circle::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: #333;
+  border: 15px solid #4d4c51;
+  border-radius: 50%;
+  box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.75), 0 -2px 2px rgba(255, 255, 255, 0.5),
+    inset 0 4px 2px rgba(0, 0, 0, 0.25),
+    inset 0 -2px 2px rgba(255, 255, 255, 0.5);
+}
+.container .circle .number {
+  position: relative;
   color: #fff;
-  font-size: 20px;
-  letter-spacing: 12px;
-  text-transform: uppercase;
-  margin-left: 10px;
-  font-weight: bolder;
+  z-index: 10;
+  line-height: 0.9em;
+  font-size: 2em;
 }
-/* <!-- loader section end --> */
+.container .circle .number span {
+  font-size: 0.5em;
+  font-weight: 500;
+}
+.skill-h4 {
+  position: relative;
+  font-size: 0.8em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-color);
+  font-weight: 600;
+  text-transform: uppercase;
+  padding-top: 10px;
+}
+.education {
+  width: 50%;
+  margin-top: 20px;
+}
+.btn1{
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  font-size: 30px;
+  font-weight: 700;
+  padding: 2px 10%;
+  text-transform: uppercase;
+  margin: 0 25%;
+  background: #2196f3;
+  box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+  transition-delay: 0.1s;
+}
+
+.btn:hover {
+  border: 2px solid var(--primary-color);
+  background: #2196f3;
+  color: var(--primary-color);
+}
+.study {
+  margin: 20px;
+  padding: 20px;
+  position: relative;
+  line-height: 0px;
+}
+.study-h5 {
+  font-size: 30px;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+}
+.s-text {
+  font-size: 14px;
+  font-weight: 500;
+}
+.s-head {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: justify;
+}
