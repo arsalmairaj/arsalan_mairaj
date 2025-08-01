@@ -1,13 +1,9 @@
-.full-height{
-  min-height: 100vh;
-}
-
 /* <!-- loader section start --> */
-/* .preloader-logo {
+.preloader-logo {
   position: fixed;
   top: 0;
   left: 0;
-  background: var(--bg-color);
+  background: var(--theme);
   height: 100%;
   width: 100%;
   display: flex;
@@ -17,31 +13,35 @@
   color: #191654;
   z-index: 999999;
 }
-
 .first {
-  stroke: white;
+  stroke: var(--btn-g1);
   fill-opacity: 0;
   stroke-width: 20px;
   stroke-dasharray: 4500;
-  animation: draw 8s ease;
+  animation: draw 6s ease;
 }
 @keyframes draw {
   0% {
     stroke-dashoffset: 4500;
   }
+
   100% {
     stroke-dashoffset: 0;
   }
 }
-.b-name {
+.brand-name {
   height: 30px;
   overflow: hidden;
 }
-.l-name {
-  color: #ffffff;
+.name {
   font-size: 30px;
   letter-spacing: 10px;
   text-transform: uppercase;
   margin-left: 10px;
   font-weight: bolder;
-} */
+  line-height: 30px;
+}
+/* <!-- loader section end --> */
+.full-height {
+  min-height: 100vh;
+}
