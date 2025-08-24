@@ -13,7 +13,7 @@
   color: #191654;
   z-index: 999999;
 }
-.first {
+.first{
   stroke: var(--btn-g1);
   fill-opacity: 0;
   stroke-width: 20px;
@@ -42,6 +42,81 @@
   line-height: 30px;
 }
 /* <!-- loader section end --> */
-.full-height {
-  min-height: 100vh;
+.t-justify{
+  text-align: justify;
+}
+.logo-img {
+  width: 100px;
+}
+.glass{
+   background-color: var(--glass);
+  backdrop-filter: blur(10px);
+  transition: transform 0.4s ease, opacity 0.3s ease;
+}
+.gradient-text {
+  background: linear-gradient(135deg, var(--btn-g1), var(--btn-g2));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.button-glow{
+  background: linear-gradient(135deg, var(--btn-g1), var(--btn-g2));
+  box-shadow: 0 0 15px var(--btn-s1), 0 0 25px var(--btn-s2);
+  animation: btn-glow 1.5s infinite alternate;
+  will-change: transform, box-shadow;
+}
+.text{
+  text-transform: capitalize;
+  font-variant: small-caps;
+}
+@keyframes btn-glow {
+  0% {
+    box-shadow: 0 0 15px var(--btn-s1), 0 0 25px var(--btn-s2);
+  }
+
+  100% {
+    box-shadow: 0 0 25px var(--btn-s1), 0 0 40px var(--btn-s2);
+  }
+}
+.hr{
+  width: 50%;
+}
+.mongodb {
+  box-shadow: 0 0 10px #18AD55, 0 0 40px #18AD55, 0 0 50px #18AD55;
+
+}
+.js {
+  box-shadow: 0 0 10px #fee800, 0 0 40px #fee800, 0 0 50px #fee800;
+  
+}
+.node {
+  box-shadow: 0 0 10px #7AAF69, 0 0 40px #7AAF69, 0 0 50px #7AAF69;
+
+}
+.css {
+  box-shadow: 0 0 10px #347aeb, 0 0 40px #347aeb, 0 0 50px #347aeb;
+  
+}
+.react {
+  box-shadow: 0 0 10px #27e3d0, 0 0 40px #27e3d0, 0 0 50px #27e3d0;
+}
+.html {
+  box-shadow: 0 0 10px #e67710, 0 0 40px #e67710, 0 0 50px #e67710;
+ 
+}
+.tailwind {
+  box-shadow: 0 0 10px #3EBFF8, 0 0 40px #3EBFF8, 0 0 50px #3EBFF8;
+ 
+}
+.bs {
+  box-shadow: 0 0 10px #7E17F8, 0 0 40px #7E17F8, 0 0 50px #7E17F8;
+ 
+}
+.ex  {
+  box-shadow: 0 0 10px #F1C617, 0 0 40px #F1C617, 0 0 50px #F1C617;
+  
+}
+ 
+.ex, .bs, .tailwind, .html, .react, .css, .node, .js, .mongodb{
+  display: none;
 }

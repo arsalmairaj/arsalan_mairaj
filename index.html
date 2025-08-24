@@ -14,12 +14,13 @@
     <meta name="author" content="Arsalan Mairaj" />
     <title>Arsalan Mairaj | Expert Web Developer & Creative Web Designer</title>
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
   </head>
   
   <body>
     <header>
-    <nav class="navbar navbar-expand-lg fixed-top border-bottom border-2 border-white border-opacity-25" role="navigation">
+    <nav class="navbar navbar-expand-lg fixed-top border-bottom border-2 border-white border-opacity-25 glass" role="navigation">
         <div class="container-fluid">
           <a class="navbar-brand" href="index.html"
             ><img src="img/w-logo.png" class="img-fluid logo-img" alt="Website logo"
@@ -44,7 +45,7 @@
                 <a class="nav-link rounded-3" href="#about_me">About</a>
               </li>
               <li class="nav-item px-2">
-                <a class="nav-link rounded-3" href="#skill">Skill</a>
+                <a class="nav-link rounded-3 skill-link" href="#skill">Skill</a>
               </li>
 
               <li class="nav-item px-2">
@@ -67,30 +68,31 @@
        <div class="container text-center">
         <div class="row">
             <div class="col">
-              <h1 class="main-heading gradient-text display-1 fw-bold">Hi I'm Arsalan Mairaj</h1>
-              <h2 class="sub-heading gradient-text fs-3 fw-medium mt-3">I'm <span id="auto-type" class="clr"></span></h2>
+              <h1 class="main-heading gradient-text display-1 fw-bold text">Hi I'm Arsalan Mairaj</h1>
+              <h2 class="sub-heading gradient-text fs-3 fw-medium mt-3 text">I'm <span id="auto-type" class="clr"></span></h2>
             </div>
         </div>
       </div>
     </section>
 
-    <section id="about_me">
-        <div class="container h-100">
-          <div class="row pt-5">
+    <section id="about_me" class="min-vh-100">
+        <div class="container ">
+          <div class="row pt-sm-5">
             <div class="col d-flex justify-content-center">
-              <h2 class="py-2">About Me</h2>
+              <h2 class="py-2 gradient-text text">About Me</h2>
             </div>
           </div>
-          <div class="row">
+          <div class="about">
+          <div class="row border border-2 border-white border-opacity-25 rounded-3 glass">
             <div
-              class="col-md-6 d-flex justify-content-center align-items-center"
+              class="col-md-5 d-flex justify-content-center align-items-center "
             >
-              <img src="img/submain.png" class="img-fluid sub-img" alt="" />
+              <img src="img/submain.png" class="img-fluid about-img" alt="" />
             </div>
-            <div class="col-md-6 py-5">
+            <div class="col-md-7 pt-md-5 ">
               <article>
-                <h3 class="py-5 fs-1">Full Stack Web Developer</h3>
-                <p class="fs-5 t-j">
+                <h3 class="pt-md-5 pt-3 fs-1 gradient-text text text-center">Full Stack Web Developer</h3>
+                <p class="fs-5 text-white t-justify about-text">
                   I'm Arsalan Mairaj, a committed and creative Web Developer
                   with a strong eye for aesthetics and a solid foundation in
                   modern web technologies. I specialize in full-stack
@@ -110,48 +112,49 @@
                 </p>
               </article>
             </div>
-            <div class="col-12 d-flex justify-content-center">
-              <a href="" class="btn btn-lg btn-cv ">Download my CV</a>
+            <div class="col-12 d-flex justify-content-center  mb-3">
+              <a href="" class="btn btn-lg button-glow text">Download my CV</a>
             </div>
+          </div>
           </div>
         </div>
     </section>
 
-     <!-- <section id="skill">
-        <div class="container h-100">
-          <div class="row pt-5">
-            <div class="col-12 d-flex justify-content-center">
-              <h2>Skill</h2>
+      <section id="skill" class="min-vh-100">
+        <div class="container">
+          <div class="row pt-sm-5">
+            <div class="col-12 d-flex justify-content-center gradient-text text">
+              <h2 class="py-2 text-center">Skill</h2>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 mt-sm-5 flex">
                <div class="row">
                 <div class="col-md-4">
                     <div class="skill-section">
                         <div class="d-inline-block">
-                            <div class="circle c-1" data-degree="98" data-color="#ff2972">
+                            <div class="circle " data-degree="98" data-color="#e67710" data-shadow-class="html">
                                 <h2 class="number">98<span>%</span></h2>
                             </div>
-                            <h4 class="skill-heading">Html</h4>
+                            <h4 class="skill-heading py-2 text">Html</h4>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                      <div class="skill-section">
                         <div class="d-inline-block">
-                            <div class="circle c-1" data-degree="98" data-color="#ff2972">
-                                <h2 class="number">98<span>%</span></h2>
+                            <div class="circle" data-degree="80" data-color="#347aeb" data-shadow-class="css">
+                                <h2 class="number">80<span>%</span></h2>
                             </div>
-                            <h4 class="skill-heading">Html</h4>
+                            <h4 class="skill-heading py-2 text">Css</h4>
                         </div>
                     </div>
                 </div>
                  <div class="col-md-4">
                      <div class="skill-section">
                         <div class="d-inline-block">
-                            <div class="circle c-1" data-degree="98" data-color="#ff2972">
-                                <h2 class="number">98<span>%</span></h2>
+                            <div class="circle " data-degree="65" data-color="#fee800" data-shadow-class="js">
+                                <h2 class="number">65<span>%</span></h2>
                             </div>
-                            <h4 class="skill-heading">Html</h4>
+                            <h4 class="skill-heading py-2 text">Javascript</h4>
                         </div>
                     </div>
                 </div>
@@ -160,30 +163,30 @@
                     <div class="col-md-4">
                         <div class="skill-section">
                             <div class="d-inline-block">
-                                <div class="circle c-1" data-degree="98" data-color="#ff2972">
-                                    <h2 class="number">98<span>%</span></h2>
+                                <div class="circle " data-degree="50" data-color="#3EBFF8" data-shadow-class="tailwind">
+                                    <h2 class="number">50<span>%</span></h2>
                                 </div>
-                                <h4 class="skill-heading">Html</h4>
+                                <h4 class="skill-heading py-2 text">Tailwind</h4>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="skill-section">
                             <div class="d-inline-block">
-                                <div class="circle c-1" data-degree="98" data-color="#ff2972">
-                                    <h2 class="number">98<span>%</span></h2>
+                                <div class="circle " data-degree="75" data-color="#7E17F8" data-shadow-class="bs">
+                                    <h2 class="number">75<span>%</span></h2>
                                 </div>
-                                <h4 class="skill-heading">Html</h4>
+                                <h4 class="skill-heading py-2 text">Bootstrap/jQuery</h4>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="skill-section">
                             <div class="d-inline-block">
-                                <div class="circle c-1" data-degree="98" data-color="#ff2972">
-                                    <h2 class="number">98<span>%</span></h2>
+                                <div class="circle" data-degree="60" data-color="#27e3d0" data-shadow-class="react">
+                                    <h2 class="number">60<span>%</span></h2>
                                 </div>
-                                <h4 class="skill-heading">Html</h4>
+                                <h4 class="skill-heading py-2 text">React</h4>
                             </div>
                         </div>
                     </div>
@@ -192,50 +195,48 @@
                     <div class="col-md-4">
                         <div class="skill-section">
                             <div class="d-inline-block">
-                                <div class="circle c-1" data-degree="98" data-color="#ff2972">
-                                    <h2 class="number">98<span>%</span></h2>
+                                <div class="circle" data-degree="80" data-color="#18AD55" data-shadow-class="mongodb">
+                                    <h2 class="number">80<span>%</span></h2>
                                 </div>
-                                <h4 class="skill-heading">Html</h4>
+                                <h4 class="skill-heading py-2 text">MongoDb</h4>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="skill-section">
                             <div class="d-inline-block">
-                                <div class="circle c-1" data-degree="98" data-color="#ff2972">
-                                    <h2 class="number">98<span>%</span></h2>
+                                <div class="circle" data-degree="60" data-color="#7AAF69" data-shadow-class="node">
+                                    <h2 class="number">60<span>%</span></h2>
                                 </div>
-                                <h4 class="skill-heading">Html</h4>
+                                <h4 class="skill-heading py-2 text">NodeJs</h4>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="skill-section">
                             <div class="d-inline-block">
-                                <div class="circle c-1" data-degree="98" data-color="#ff2972">
-                                    <h2 class="number">98<span>%</span></h2>
+                                <div class="circle " data-degree="70" data-color="#F1C617" data-shadow-class="ex">
+                                    <h2 class="number">70<span>%</span></h2>
                                 </div>
-                                <h4 class="skill-heading">Html</h4>
+                                <h4 class="skill-heading py-2 text">Express Js</h4>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="col-md-6">
-                <div class="education">
-                    <a href="#" class="btn">Education</a>
+            <div class="col-md-6 mt-sm-5 d-flex align-items-center">
+                <div class="education glass border border-2 border-white border-opacity-25 rounded-3">
+                     <h3 class="pt-3 fs-1 text-center gradient-text text">Education</h3>
+                     <hr color="white" size="5">
                     <div class="study">
-                        <h5 class="study-h5">Matriculation</h5>
-                        <hr>
-                        <p class="s-text">2018 - 2020</p>
-                        <h6 class="s-head">Complete My Matriculation From The Perfect School</h6>
+                        <h5 class="fs-4 text-center gradient-text text">Matriculation</h5>
+                        <p class="text-white ps-2">2018 - 2020</p>
+                        <h6 class="text-white ps-2">Complete My Matriculation From The Perfect School</h6>
                     </div>
                     <div class="study">
-                        <h5 class="study-h5">HDSE + SBTE Intermediate</h5>
-                        <hr>
-                        <p class="s-text">2021 - 2024</p>
-                        <h6 class="s-head">Complete HDSE + SBTE From Aptech Metro Star Gate, Karachi, Pakistan</h6>
+                        <h5 class="fs-4 text-center gradient-text text">HDSE + SBTE Intermediate</h5>
+                        <p class="s-text text-white ps-2">2021 - 2024</p>
+                        <h6 class="s-head text-white ps-2">Complete HDSE + SBTE From Aptech Metro Star Gate, Karachi, Pakistan</h6>
                     </div>
                 </div>
             </div>
@@ -243,56 +244,184 @@
         </div>
       </section>
 
-       <section id="Portfolio">
+      <section id="Portfolio" class="min-vh-100">
         <div class="container">
-          <div class="row pt-5">
+          <div class="row pt-md-5">
             <div class="col d-flex justify-content-center align-items-center">
-              <h2>Portfolio</h2>
+              <h2 class="text gradient-text">Portfolio</h2>
             </div>
-            <div class="row">
-            </div>
-            <div class="row">
-            </div>  
+          </div>
+          <div class="row">
+              <div class="col-lg-4 col-md-6 col-sm-12">
+                  <div class="project-card border border-2 border-white border-opacity-25 rounded-3">
+                        <div class="project-img">
+                            <img src="img/portfolio/cosy.png" class="gallary-item" alt="Cosy Air Conditioners">
+                        </div>
+                        <div class="contentbox d-flex justify-content-center align-items-center">
+                            <div class="content">
+                                <h3 class="text gradient-text fw-bold fs-3">Cosy Air Conditioners</h3>
+                                <p class="text-white">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia, commodi?<a href="" class="text text-dark fs-5">cosyairconditioners</a></p>
+                            </div>
+                        </div>
+                    </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12">
+                  <div class="project-card border border-2 border-white border-opacity-25 rounded-3">
+                        <div class="project-img">
+                            <img src="img/portfolio/cosy.png" class="gallary-item" alt="Cosy Air Conditioners">
+                        </div>
+                        <div class="contentbox d-flex justify-content-center align-items-center">
+                            <div class="content">
+                                <h3 class="text gradient-text fw-bold fs-4">Cosy Air Conditioners</h3>
+                                <p class="text-white">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia, commodi?<a href="" class="text">cosyairconditioners</a></p>
+                            </div>
+                        </div>
+                    </div>
+              </div>
+              <div class=" col-lg-4 col-md-6 col-sm-12">
+                  <div class="project-card border border-2 border-white border-opacity-25 rounded-3">
+                        <div class="project-img">
+                            <img src="img/portfolio/cosy.png" class="gallary-item" alt="Cosy Air Conditioners">
+                        </div>
+                        <div class="contentbox d-flex justify-content-center align-items-center">
+                            <div class="content">
+                                <h3 class="text gradient-text fw-bold fs-4">Cosy Air Conditioners</h3>
+                                <p class="text-white">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia, commodi?<a href="" class="text">cosyairconditioners</a></p>
+                            </div>
+                        </div>
+                    </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12">
+                  <div class="project-card border border-2 border-white border-opacity-25 rounded-3">
+                        <div class="project-img">
+                            <img src="img/portfolio/cosy.png" class="gallary-item" alt="Cosy Air Conditioners">
+                        </div>
+                        <div class="contentbox d-flex justify-content-center align-items-center">
+                            <div class="content">
+                                <h3 class="text gradient-text fw-bold fs-4">Cosy Air Conditioners</h3>
+                                <p class="text-white">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia, commodi?<a href="" class="text">cosyairconditioners</a></p>
+                            </div>
+                        </div>
+                    </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12">
+                  <div class="project-card border border-2 border-white border-opacity-25 rounded-3">
+                        <div class="project-img">
+                            <img src="img/portfolio/cosy.png" class="gallary-item" alt="Cosy Air Conditioners">
+                        </div>
+                        <div class="contentbox d-flex justify-content-center align-items-center">
+                            <div class="content">
+                                <h3 class="text gradient-text fw-bold fs-4">Cosy Air Conditioners</h3>
+                                <p class="text-white">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia, commodi?<a href="" class="text">cosyairconditioners</a></p>
+                            </div>
+                        </div>
+                    </div>
+              </div>
+              <div class=" col-lg-4 col-md-6 col-sm-12">
+                  <div class="project-card border border-2 border-white border-opacity-25 rounded-3">
+                        <div class="project-img">
+                            <img src="img/portfolio/cosy.png" class="gallary-item" alt="Cosy Air Conditioners">
+                        </div>
+                        <div class="contentbox d-flex justify-content-center align-items-center">
+                            <div class="content">
+                                <h3 class="text gradient-text fw-bold fs-4">Cosy Air Conditioners</h3>
+                                <p class="text-white">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia, commodi?<a href="" class="text">cosyairconditioners</a></p>
+                            </div>
+                        </div>
+                    </div>
+              </div>
           </div>
         </div>
       </section>
 
-      <section id="my_services">
+       <section id="my_services" class="min-vh-100">
         <div class="container">
-          <div class="row">
+          <div class="row pt-md-5">
             <div class="col">
-              <h2>My Service</h2>
+              <h2 class="text-center text gradient-text">My Service</h2>
             </div>
           </div>
-          <div class="row">
-            <div class="col"></div>
-            <div class="col"></div>
-            <div class="col"></div>
-            <div class="col"></div>
+          <div class="row mt-md-5">
+            <div class="col-md-6 my-2">
+              <div class="border border-2 border-white border-opacity-25 glass rounded-3 px-2 ">
+                <h3 class="fs-2 text gradient-text fw-bold"><i class="fa-solid fa-laptop-code gradient-text fw-bold"></i> Web Development</h3>
+                <p class="text-white t-justify">As an expert web developer, I specialize in designing and building responsive, user-centric websites that elevate your online presence. My services include creating bespoke websites tailored to your unique requirements, from visually captivating portfolios to robust, custom web applications. I am committed to delivering high-quality, innovative, and scalable web development solutions that drive results and exceed expectations.</p>
+              </div>
+            </div>
+            <div class="col-md-6 my-2">
+              <div class="border border-2 border-white border-opacity-25 glass rounded-3 px-2 py-2">
+                <h3 class="fs-2 text gradient-text fw-bold"><i class="fa-solid fa-laptop gradient-text fw-bold"></i> Code Quality</h3>
+                <p class="text-white t-justify">I craft clean, efficient, and maintainable code designed for clarity and scalability. By prioritizing readability and structured organization, I ensure your projects are robust, sustainable, and easy to enhance. My commitment to best practices guarantees long-term reliability and performance. Let’s create software that performs seamlessly and is a joy to maintain and build upon.</p>
+              </div>
+            </div>
+             <div class="col-md-6 my-2">
+              <div class="border border-2 border-white border-opacity-25 glass rounded-3 px-2 py-2">
+                <h3 class="fs-2 text gradient-text fw-bold"><i class="fa-solid fa-square-poll-horizontal gradient-text fw-bold"></i> User Interface Design</h3>
+                <p class="text-white t-justify">I design visually striking and intuitive user interfaces that effortlessly guide users toward their objectives. My expertise lies in crafting organized, user-focused designs that blend aesthetic appeal with exceptional functionality. By prioritizing seamless user experiences, I ensure interfaces that captivate and perform flawlessly. Let's bring your vision to life with a stunning and effective interface.</p>
+              </div>
+            </div>
+            <div class="col-md-6 my-2">
+              <div class="border border-2 border-white border-opacity-25 glass rounded-3 px-2 py-2">
+                <h3 class="fs-2 text gradient-text fw-bold"><i class="fa-solid fa-chalkboard-user gradient-text fw-bold"></i> User Experience</h3>
+                <p class="text-white t-justify">Exceptional user experiences drive product success. I create intuitive, engaging, and delightful digital experiences that resonate with users. By emphasizing usability, satisfaction, and seamless interactions, I build products that users love and advocate for. My iterative design process ensures continuous improvement and alignment with user needs. Let’s collaborate to design something truly remarkable.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="contact_me">
+      <section id="contact_me" class="min-vh-100">
         <div class="container">
-          <div class="row">
+          <div class="row pt-md-5">
             <div class="col">
-              <h2>Contact Me</h2>
+              <h2 class="text-center text gradient-text">Contact Me</h2>
             </div>
           </div>
-          <div class="row">
-            <div class="col">
-              <h3>Contact Information</h3>
+          <div class="row mt-md-5">
+            <div class="col-md-6">
+              <h2 class="text gradient-text pt-2">Contact Information</h2>
+              <div class="mt-5">
+                <h4 class="gradient-text text pt-md-5 fs-5">Email</h4>
+                <a href="#" class="text-white">arsalanan24@gmail.com</a>
+                <hr color="white" size="5" class="hr">
+                <h4 class="text gradient-text fs-5">Phone</h4>
+                <div class="">
+                <a href="#" class="text-white">+92 3102499153</a>
+                </div>
+                <a href="#" class="text-white">+92 3263949355</a>
+                <hr color="white" size="5" class="hr">
+                <h4 class="text gradient-text fs-5">Address</h4>
+                <div class="">
+                  <span class="text-white">Karachi</span>
+                </div>
+                <p class="text-white">Sindh, Pakistan</p>
+              </div>
             </div>
-            <div class="col">
-              <h3>Leave A Message</h3>
+            <div class="col-md-6">
+              <h2 class="text gradient-text pb-md-5">Leave A Message</h2>
+                 <form id="contactForm" class="custom-form pt-md-5">
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <input type="text" class="form-control" id="name" placeholder="Name" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <input type="email" class="form-control" id="email" placeholder="Email" required>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <textarea class="form-control" id="message" rows="7" placeholder="Write Your Message.." required></textarea>
+                  </div>
+                  <div class="text-center">
+                    <button type="submit" class="btn btn-lg button-glow text">Submit</button>
+                  </div>
+                </form>
             </div>
           </div>
         </div>
-      </section> -->
+      </section>  
       
       <section>
-           <div class="preloader-logo">
+            <!-- <div class="preloader-logo">
         <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="500" height="300.000000pt"
             viewBox="0 0 300.000000 300.000000" preserveAspectRatio="xMidYMid meet">
             <metadata>
@@ -321,7 +450,7 @@
         <div class="brand-name">
             <div class="name gradient-text">Arsalan Mairaj</div>
         </div>
-         </div>   
+         </div> -->
       </section>
 
     </main>
@@ -343,11 +472,9 @@
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://kit.fontawesome.com/c2b24f0f1c.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/script.js"></script>
-
-<script>
-
-</script>
   </body>
 </html>
