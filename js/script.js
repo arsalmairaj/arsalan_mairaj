@@ -102,6 +102,8 @@ let typed = new Typed("#auto-type", {
   showCursor: false,
   cursorChar: "|",
 });
+// button animation
+const elements = document.querySelectorAll('.ripple')
 // hero section end
 
 // skill section start

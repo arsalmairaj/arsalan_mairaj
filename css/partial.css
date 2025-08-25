@@ -13,6 +13,10 @@
   color: #191654;
   z-index: 999999;
 }
+.brand-name {
+  height: 30px;
+  overflow: hidden;
+}
 .first{
   stroke: var(--btn-g1);
   fill-opacity: 0;
@@ -28,10 +32,6 @@
   100% {
     stroke-dashoffset: 0;
   }
-}
-.brand-name {
-  height: 30px;
-  overflow: hidden;
 }
 .name {
   font-size: 30px;
@@ -59,24 +59,10 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.button-glow{
-  background: linear-gradient(135deg, var(--btn-g1), var(--btn-g2));
-  box-shadow: 0 0 15px var(--btn-s1), 0 0 25px var(--btn-s2);
-  animation: btn-glow 1.5s infinite alternate;
-  will-change: transform, box-shadow;
-}
+
 .text{
   text-transform: capitalize;
   font-variant: small-caps;
-}
-@keyframes btn-glow {
-  0% {
-    box-shadow: 0 0 15px var(--btn-s1), 0 0 25px var(--btn-s2);
-  }
-
-  100% {
-    box-shadow: 0 0 25px var(--btn-s1), 0 0 40px var(--btn-s2);
-  }
 }
 .hr{
   width: 50%;
@@ -119,4 +105,19 @@
  
 .ex, .bs, .tailwind, .html, .react, .css, .node, .js, .mongodb{
   display: none;
+}
+.button-glow{
+  background: linear-gradient(135deg, var(--btn-g1), var(--btn-g2));
+  box-shadow: 0 0 15px var(--btn-s1), 0 0 25px var(--btn-s2);
+  animation: btn-glow 1.5s infinite alternate;
+  will-change: transform, box-shadow;
+}
+@keyframes btn-glow {
+  0% {
+    box-shadow: 0 0 15px var(--btn-s1), 0 0 25px var(--btn-s2);
+  }
+
+  100% {
+    box-shadow: 0 0 25px var(--btn-s1), 0 0 40px var(--btn-s2);
+  }
 }
