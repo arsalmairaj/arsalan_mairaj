@@ -2,7 +2,6 @@
 @import url(partial.css);
 @import url(animation.css);
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
 :root {
   --theme: #000000;
   --hero-g: rgba(0, 0, 0, 0.4);
@@ -16,12 +15,18 @@
 }
 html {
     scroll-behavior: smooth;
+    scrollbar-color: var(--text) var(--theme);
+    scrollbar-width: thin;    
 }
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+}
+*::selection{
+  background-color: var(--text);
+  color: var(--theme);
 }
 body {
   background-color: var(--theme);
@@ -35,9 +40,9 @@ body {
   width: 100%;
   height: 100%;
   background: linear-gradient(90deg,
-      transparent,
-      rgba(255, 255, 255, 0.4),
-      transparent);
+  transparent,
+  rgba(255, 255, 255, 0.4),
+  transparent);
   transition: 0.5s;
 }
 .navbar:hover::before {
@@ -78,13 +83,32 @@ body {
     0 0 10px rgba(219, 160, 255, 0.1),
     0 0 15px rgba(219, 160, 255, 0.05);
 }
-/* Hero section end */
+@keyframes navlink-glow {
+  0% {
+    box-shadow: 0 0 15px var(--btn-s1), 0 0 25px var(--btn-s2);
+  }
 
+  100% {
+    box-shadow: 0 0 25px var(--btn-s1), 0 0 40px var(--btn-s2);
+  }
+}
+@keyframes heading-glow {
+  0% {
+    text-shadow: 0 0 10px rgba(142, 158, 255, 0.4),
+      0 0 20px rgba(219, 160, 255, 0.3),
+      0 0 30px rgba(219, 160, 255, 0.2);
+  }
+
+  100% {
+    text-shadow: 0 0 15px rgba(142, 158, 255, 0.7),
+      0 0 30px rgba(219, 160, 255, 0.5),
+      0 0 45px rgba(219, 160, 255, 0.3);
+  }
+}
 /* about section start */
 .about-img{
   width: 400px;
 }
-/* about section end */
 /* Skill section start */
 .circle {
   position: relative;
@@ -121,16 +145,14 @@ body {
     inset 0 -2px 2px rgba(255, 255, 255, 0.5);
     z-index: 0;
 }
-  .circle.glowing {
-    animation: glow 1.5s ease-in-out infinite;
-  }
- @keyframes glow {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
-        }
-
-
+.circle.glowing {
+  animation: glow 1.5s ease-in-out infinite;
+}
+@keyframes glow {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
 .circle .number {
   position: relative;
   color: var(--text);
@@ -153,8 +175,6 @@ body {
   font-weight: 600;
   padding-top: 10px;
 }
-/* Skill section end */
-
 /* portfolio start */
 .project-card{
   position: relative; 
@@ -210,31 +230,24 @@ body {
   transform: translateX(0px);
   transition-delay: 0.5s;
 }
-/* portfolio end */
-
 /* contact start */
-    .custom-form .form-control {
-      background: none;
-      border: 0;
-      border-bottom: 1px solid var(--text);
-      border-radius: 0;
-      padding: 10px 0;
-      color: var(--text);
-    }
-      .custom-form .form-control:focus {
-      box-shadow: none;
-
-    }
-     .custom-form .form-control::placeholder {
-      color: var(--text); 
-    }
-  
-/* contact end */
-
+.custom-form .form-control {
+  background: none;
+  border: 0;
+  border-bottom: 1px solid var(--text);
+  border-radius: 0;
+  padding: 10px 0;
+  color: var(--text);
+}
+.custom-form .form-control:focus {
+  box-shadow: none;
+}
+.custom-form .form-control::placeholder {
+  color: var(--text); 
+}
 /* footer start */
   
-/* footer end */
-
+/* Media start */
 @media (max-width: 992px) {
   .circle{
     width: 100px;
@@ -246,15 +259,17 @@ body {
     height: 70px;
     border: 10px solid #4d4c51;
   }
-     .circle .number {
+  .circle .number {
     font-size: 1.5em;
     line-height: 0.5em;
   }
   .about-text{
     font-size: 15px !important;
   }
+  .name {
+    font-size: 25px;
+  }
 }
-
 @media (max-width: 768px) {
   .logo-img{
     width: 60px;
@@ -272,17 +287,16 @@ body {
     background-size: cover;
   }
   .about-img{
-  width: 300px;
-}
-.btn{
-  width: 150px;
-  font-size: 15px;
-  height:40px;
-}
+  width: 300px; 
+  }
+  .btn{
+    width: 150px;
+    font-size: 15px;
+    height:40px;
+  }
   .circle{
     width: 70px;
     height: 70px;
-
   }
   .circle::before{
     content: '';
@@ -303,14 +317,17 @@ body {
     line-height: 1px;
   }
   .hr{
-  width: 100%;
-}
+  width: 100%;  
+  }
 }
 @media (max-width:767px){
 .flex{
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .name {
+    font-size: 20px;
   }
 }
 @media (max-width: 576px) {
@@ -330,8 +347,8 @@ body {
   width: 130px;
   font-size: 11px;
   height:38px;
-}
-.study h6{
+  }
+  .study h6{
     font-size: 15px;
   }
    .circle .number {
@@ -341,27 +358,7 @@ body {
   .skill-heading{
     font-size: 0.7em;
   }
-
-}
-@keyframes navlink-glow {
-  0% {
-    box-shadow: 0 0 15px var(--btn-s1), 0 0 25px var(--btn-s2);
-  }
-
-  100% {
-    box-shadow: 0 0 25px var(--btn-s1), 0 0 40px var(--btn-s2);
-  }
-}
-@keyframes heading-glow {
-  0% {
-    text-shadow: 0 0 10px rgba(142, 158, 255, 0.4),
-      0 0 20px rgba(219, 160, 255, 0.3),
-      0 0 30px rgba(219, 160, 255, 0.2);
-  }
-
-  100% {
-    text-shadow: 0 0 15px rgba(142, 158, 255, 0.7),
-      0 0 30px rgba(219, 160, 255, 0.5),
-      0 0 45px rgba(219, 160, 255, 0.3);
+  .name {
+    font-size: 15px;
   }
 }

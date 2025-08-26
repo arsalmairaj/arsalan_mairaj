@@ -3,12 +3,12 @@ const timeLine = gsap.timeline();
 timeLine.fromTo(
   ".name",
   { y: 50, opacity: 0 },
-  { y: 0, opacity: 1, duration: 2, delay: 0.5 }
+  { y: 0, opacity: 1, duration: 1, delay: 0.5 }
 );
 timeLine.to(
   ".preloader-logo",
-  { opacity: 0, display: "none", duration: 1.5 },
-  6
+  { opacity: 0, display: "none", duration: .5 },
+  2.5
 );
 // Loader section end
 // hero section start
@@ -102,8 +102,6 @@ let typed = new Typed("#auto-type", {
   showCursor: false,
   cursorChar: "|",
 });
-// button animation
-const elements = document.querySelectorAll('.ripple')
 // hero section end
 
 // skill section start
@@ -204,3 +202,11 @@ document.addEventListener("click", function (event) {
       });
     });
 // contact end
+
+// 3d effect
+VanillaTilt.init(document.querySelectorAll(".tilt "), {
+  max: 30,
+  speed: 400
+});
+// aos
+AOS.init();
